@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
   branco: '#eeeeee',
@@ -6,12 +6,6 @@ export const cores = {
   cinza: '#333',
   verde: '#10ac84'
 }
-
-export const Container = styled.div`
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
-`
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -22,6 +16,12 @@ export const GlobalStyle = createGlobalStyle`
   text-decoration: none;
   scroll-behavior: smooth;
   font-family: 'Roboto Mono', sans-serif;
+
+  .container {
+    max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  }
 }
 
 body {
