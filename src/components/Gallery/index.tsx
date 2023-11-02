@@ -6,11 +6,7 @@ import zoom from '../../assets/images/zoom.png'
 import close from '../../assets/images/fechar.png'
 import Section from '../Section'
 import { Item, Items, Action, Modal, ModalContent } from './styles'
-
-interface GalleryItem {
-  type: 'image' | 'video'
-  url: string
-}
+import { GalleryItem } from '../../pages/Home'
 
 const mock: GalleryItem[] = [
   {
