@@ -6,9 +6,12 @@ import { InputGroup, Row, TabButton } from './styles'
 import boleto from '../../assets/images/boleto.png'
 import cartao from '../../assets/images/cartao.png'
 import * as Yup from 'yup'
+import { usePurchaseMutation } from '../../services/api'
 
 const Checkout = () => {
   const [payWhithCard, setPayWhithCard] = useState(false)
+
+  const [purchase, { isLoading, isError, data }] = usePurchaseMutation()
 
   const form = useFormik({
     initialValues: {
@@ -24,7 +27,7 @@ const Checkout = () => {
       expiresMonth: '',
       expiresYear: '',
       cardSecurityCode: '',
-      installments: 1
+      installments: ''
     },
     validationSchema: Yup.object({
       fullName: Yup.string()
@@ -70,9 +73,43 @@ const Checkout = () => {
       )
     }),
     onSubmit: (values) => {
-      console.log(values)
+      purchase({
+        billing: {
+          document: values.cpf,
+          email: values.email,
+          name: values.fullName
+        },
+        delivery: {
+          email: values.deliveryEmail
+        },
+        payment: {
+          installments: 1,
+          card: {
+            active: payWhithCard,
+            code: Number(values.cardSecurityCode),
+            name: values.cardDisplayName,
+            number: values.cardNumber,
+            owner: {
+              document: values.cpfCardOwner,
+              name: values.cardOwner
+            },
+            expires: {
+              month: 1,
+              year: 2023
+            }
+          }
+        },
+        products: [
+          {
+            id: 1,
+            price: 10
+          }
+        ]
+      })
     }
   })
+
+  console.log(form)
 
   const getErrorMessage = (fieldName: string, message?: string) => {
     const isTouched = fieldName in form.touched
