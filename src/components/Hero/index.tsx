@@ -1,4 +1,4 @@
-import { Banner, Infos } from './styles'
+import * as S from './styles'
 import { add, open } from '../../store/reducers/cart'
 
 import { parseToBrl } from '../../utils'
@@ -21,13 +21,13 @@ const Hero = ({ game }: Props) => {
   }
 
   return (
-    <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
+    <S.Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">
         <div>
           <Tag>{game.details.category}</Tag>
           <Tag>{game.details.system}</Tag>
         </div>
-        <Infos>
+        <S.Infos>
           <h2>{game.name}</h2>
           <p>
             {game.prices.discount && (
@@ -45,9 +45,9 @@ const Hero = ({ game }: Props) => {
               Adicionar ao Carrinho
             </Button>
           )}
-        </Infos>
+        </S.Infos>
       </div>
-    </Banner>
+    </S.Banner>
   )
 }
 
