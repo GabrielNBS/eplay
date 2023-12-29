@@ -9,19 +9,44 @@ const Footer = () => (
         <SectionTitle>Categorias</SectionTitle>
         <Links>
           <li>
-            <Link to="/categories#rpg">RPG</Link>
+            <Link
+              title="Clique aqui para acessar jogos de RPG"
+              to="/categories#rpg"
+            >
+              RPG
+            </Link>
           </li>
           <li>
-            <Link to="/categories#action">AÇÃO</Link>
+            <Link
+              title="Clique aqui para acessar jogos de Ação"
+              to="/categories#action"
+            >
+              AÇÃO
+            </Link>
           </li>
           <li>
-            <Link to="/categories#sports">ESPORTES</Link>
+            <Link
+              title="Clique aqui para acessar jogos de Esportes"
+              to="/categories#sports"
+            >
+              ESPORTES
+            </Link>
           </li>
           <li>
-            <Link to="/categories#simulation">SIMULAÇÃO</Link>
+            <Link
+              title="Clique aqui para acessar jogos de Simulação"
+              to="/categories#simulation"
+            >
+              SIMULAÇÃO
+            </Link>
           </li>
           <li>
-            <Link to="/categories#fight">LUTA</Link>
+            <Link
+              title="Clique aqui para acessar jogos de RPG"
+              to="/categories#fight"
+            >
+              LUTA
+            </Link>
           </li>
         </Links>
       </FooterSection>
@@ -29,10 +54,20 @@ const Footer = () => (
         <SectionTitle>Acesso rapido</SectionTitle>
         <Links>
           <li>
-            <Link to="/#on-sale">PROMOÇÕES</Link>
+            <Link
+              title="Clique aqui para acessar a sessão de promoções"
+              to="/#on-sale"
+            >
+              PROMOÇÕES
+            </Link>
           </li>
           <li>
-            <Link to="/#coming-soon">EM BREVE</Link>
+            <Link
+              title="Clique aqui para acessar a sessão de em breve"
+              to="/#coming-soon"
+            >
+              EM BREVE
+            </Link>
           </li>
         </Links>
       </FooterSection>

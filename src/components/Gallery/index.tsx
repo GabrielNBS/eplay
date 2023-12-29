@@ -1,27 +1,13 @@
 import { useState } from 'react'
-import spiderMan from '../../assets/images//banner-homem-aranha.png'
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
+
+import { GalleryItem } from '../../pages/Home'
+
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import close from '../../assets/images/fechar.png'
 import Section from '../Section'
-import { Item, Items, Action, Modal, ModalContent } from './styles'
-import { GalleryItem } from '../../pages/Home'
 
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: spiderMan
-  },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=E8CUmsC7gwZjEmso'
-  }
-]
+import { Item, Items, Action, Modal, ModalContent } from './styles'
 
 type Props = {
   defaultCover: string
