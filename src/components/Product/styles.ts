@@ -9,7 +9,7 @@ export const Card = styled(Link)`
   padding: 8px;
   position: relative;
   text-decoration: none;
-  color: ${colors.black};
+  color: ${colors.white};
   display: block;
   height: 100%;
 

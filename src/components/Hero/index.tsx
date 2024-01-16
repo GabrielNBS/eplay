@@ -5,7 +5,7 @@ import { parseToBrl } from '../../utils'
 
 import Tag from '../Tag'
 import Button from '../Button'
-import { Game } from '../../pages/Home'
+
 import { useDispatch } from 'react-redux'
 
 type Props = {
